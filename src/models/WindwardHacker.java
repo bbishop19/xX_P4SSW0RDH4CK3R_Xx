@@ -1,7 +1,5 @@
 package models;
 
-import java.time.Month;
-
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -32,7 +30,7 @@ public class WindwardHacker implements PasswordGuesser{
         //gets year, then adds 1 to it if it is July or later, then adds the current year we are testing
         password += Calendar.getInstance().get(Calendar.YEAR) +  (Calendar.getInstance().get(Calendar.MONTH)+5)%11 + yearModifier;
 
-        if (++yearModifier == 7){
+        if (++yearModifier == 6){
             yearModifier = 0;
             if(++index == specialCharacters.length){
                 index = 0;
