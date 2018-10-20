@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Set up structure">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="finish WindwardHacker and add interface for guessers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/BruteForce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BruteForce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/WindwardHacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/WindwardHacker.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -67,19 +68,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="62" />
-          <entry key="txt" value="42" />
+          <entry key="java" value="1198" />
+          <entry key="txt" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="3" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="3" />
           <entry key="placeholder" value="1" />
           <entry key="placeholder2" value="1" />
           <entry key="txt" value="1" />
@@ -87,8 +88,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="62" />
-          <entry key="PLAIN_TEXT" value="42" />
+          <entry key="JAVA" value="1198" />
+          <entry key="PLAIN_TEXT" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -102,15 +103,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/WindwardHacker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+            <state relative-caret-position="381">
+              <caret line="31" column="79" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/PasswordGuesser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/models/BruteForce.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding>
+                <element signature="e#141#150#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/nounlist.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="2122" column="4" lean-forward="true" selection-start-line="2122" selection-start-column="4" selection-end-line="2122" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -129,6 +158,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -143,7 +173,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/models/PasswordGuesser.java" />
         <option value="$PROJECT_DIR$/src/models/WindwardHacker.java" />
+        <option value="$PROJECT_DIR$/src/models/BruteForce.java" />
       </list>
     </option>
   </component>
@@ -174,6 +206,23 @@
               <item name="xX_P4SSW0RDH4CK3R_Xx" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="xX_P4SSW0RDH4CK3R_Xx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xX_P4SSW0RDH4CK3R_Xx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xX_P4SSW0RDH4CK3R_Xx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xX_P4SSW0RDH4CK3R_Xx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xX_P4SSW0RDH4CK3R_Xx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xX_P4SSW0RDH4CK3R_Xx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -192,7 +241,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539987339215" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540006687474" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
   </component>
@@ -317,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539984638166</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add nounlist">
+      <created>1539987348056</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1539987348056</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -325,8 +381,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="821" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25679544" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -346,7 +403,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32921812" />
       <window_info anchor="bottom" id="Terminal" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -368,7 +425,9 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="add basic stuff" />
     <MESSAGE value="Set up structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up structure" />
+    <MESSAGE value="add nounlist" />
+    <MESSAGE value="finish WindwardHacker and add interface for guessers" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish WindwardHacker and add interface for guessers" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -406,15 +465,39 @@
     <entry file="file://$PROJECT_DIR$/src/view/placeholder2">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/WindwardHacker.java">
+    <entry file="file://$PROJECT_DIR$/resources/nounlist.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        <state relative-caret-position="404">
+          <caret line="2122" column="4" lean-forward="true" selection-start-line="2122" selection-start-column="4" selection-end-line="2122" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/nounlist.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/models/PasswordGuesser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/WindwardHacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="31" column="79" selection-start-line="31" selection-start-column="79" selection-end-line="31" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/BruteForce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="e#141#150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
