@@ -11,7 +11,7 @@ public class WindwardHacker implements PasswordGuesser{
     private int yearModifier;
 
     public WindwardHacker(){
-        specialCharacters = new char[]{'!', '@', '#', '$', '%', '^', '&', '*',};
+        specialCharacters = new char[]{'!', '@', '#', '$', '%', '^', '&', '*'};
         index = 0;
         yearModifier = 0;
 
