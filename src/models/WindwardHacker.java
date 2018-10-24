@@ -16,8 +16,10 @@ public class WindwardHacker implements PasswordGuesser{
         yearModifier = 0;
 
         try{
-            nounlist = new Scanner(getClass().getResourceAsStream("words.txt"));
-        }catch(Exception e){}
+            nounlist = new Scanner(getClass().getClassLoader().getResourceAsStream("words.txt"));
+        }catch(Exception e){
+            System.out.println("oops");
+        }
 
         if(nounlist.hasNext()) {
             currentWord = nounlist.next();

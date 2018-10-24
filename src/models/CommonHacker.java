@@ -7,7 +7,7 @@ public class CommonHacker implements PasswordGuesser {
 
     public CommonHacker(){
         try{
-            everyPasswordEver = new Scanner(getClass().getResourceAsStream("passwords.txt"));
+            everyPasswordEver = new Scanner(getClass().getClassLoader().getResourceAsStream("passwords.txt"));
         }catch(Exception e){}
 
     }
