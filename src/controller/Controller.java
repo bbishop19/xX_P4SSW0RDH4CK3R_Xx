@@ -1,22 +1,36 @@
 package controller;
 
-import java.util.ArrayList;
+import javafx.stage.Stage;
+import models.*;
+import view.View;
 
-import models.PasswordGuesser;
-import models.WindwardHacker;
-
-public class Controller {
-	ArrayList<PasswordGuesser> guessers = new ArrayList<PasswordGuesser>();
-	public static void main(String[] args){
-		WindwardHacker wwh = new WindwardHacker();
-		String password = "Zwolle*2024";
+public class Controller {	
+	public CrackInfo windwardHack(String password){
+		return crack(password, new WindwardHacker());
+	}
+	
+	public CrackInfo bruteForce(String password){
+		return crack(password, new BruteForcer());
+	}
+	
+	public CrackInfo commonHack(String password){
+		return crack(password, new CommonHacker());
+	}
+	
+	public CrackInfo crack(String password, PasswordGuesser guesser){
 		String guess;
+		boolean cracked = false;
 		long time = System.currentTimeMillis();
+		int attempts = 0;
 		do {
-			guess= wwh.getNext();
-		}while (!(guess == null || guess.equals(password)));
+			guess = guesser.getNext();
+			attempts++;
+			if(guess.equals(password)){
+				cracked = true;
+				break;
+			}
+		}while (guess != null);
 		time = System.currentTimeMillis() - time;
-		System.out.println(guess);
-		System.out.println(time);
+		return new CrackInfo(cracked, time, attempts);
 	}
 }
