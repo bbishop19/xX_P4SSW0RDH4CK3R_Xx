@@ -4,20 +4,20 @@ import javafx.stage.Stage;
 import models.*;
 import view.View;
 
-public class Controller {	
-	public CrackInfo windwardHack(String password){
+public abstract class Controller {
+	public static CrackInfo windwardHack(String password){
 		return crack(password, new WindwardHacker());
 	}
 	
-	public CrackInfo bruteForce(String password){
+	public static CrackInfo bruteForce(String password){
 		return crack(password, new BruteForcer());
 	}
 	
-	public CrackInfo commonHack(String password){
+	public static CrackInfo commonHack(String password){
 		return crack(password, new CommonHacker());
 	}
 	
-	public CrackInfo crack(String password, PasswordGuesser guesser){
+	public static CrackInfo crack(String password, PasswordGuesser guesser){
 		String guess;
 		boolean cracked = false;
 		long time = System.currentTimeMillis();
