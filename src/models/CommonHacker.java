@@ -1,27 +1,24 @@
 package models;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class CommonHacker implements PasswordGuesser {
-    private Scanner everyPasswordEver;
+    private BufferedReader everyPasswordEver;
 
     public CommonHacker(){
         try{
-            everyPasswordEver = new Scanner(getClass().getResourceAsStream("10millionpasswords.txt"));
+            everyPasswordEver = new BufferedReader(new FileReader(getClass().getClassLoader().getResource("passwords").getFile()));
         }catch(Exception e){}
 
     }
 
-    @Override
     public String getNext() {
-        if(everyPasswordEver.hasNext()){
-            return everyPasswordEver.next();
-        }else{
+        try{
+            return everyPasswordEver.readLine();
+        }catch (Exception e){
             return null;
         }
-    }
-
-    public void closeScanner(){
-        everyPasswordEver.close();
     }
 }
