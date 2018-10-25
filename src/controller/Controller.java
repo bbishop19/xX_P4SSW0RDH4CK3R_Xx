@@ -9,7 +9,7 @@ public class Controller {
 	ArrayList<PasswordGuesser> guessers = new ArrayList<PasswordGuesser>();
 	public static void main(String[] args){
 		WindwardHacker wwh = new WindwardHacker();
-		String password = "Chair*2019";
+		String password = "Zwolle*2024";
 		String guess;
 		long time = System.currentTimeMillis();
 		do {

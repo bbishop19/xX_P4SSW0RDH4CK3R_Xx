@@ -1,32 +1,36 @@
 package models;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Calendar;
 import java.util.Scanner;
 
 public class WindwardHacker implements PasswordGuesser{
-    private Scanner nounlist;
+    private BufferedReader nounlist;
     private char[] specialCharacters;
     private int index;
     private String currentWord;
     private int yearModifier;
+    boolean returningNull;
 
     public WindwardHacker(){
         specialCharacters = new char[]{'!', '@', '#', '$', '%', '^', '&', '*'};
         index = 0;
         yearModifier = 0;
+        returningNull = false;
 
         try{
-            nounlist = new Scanner(getClass().getClassLoader().getResourceAsStream("words"));
+            nounlist = new BufferedReader(new FileReader(getClass().getClassLoader().getResource("words").getFile()));
         }catch(Exception e){
-            System.out.println("oops");
-        }
-
-        if(nounlist.hasNext()) {
-            currentWord = nounlist.next();
+            returningNull = true;
         }
     }
 
     public String getNext(){
+        if(returningNull){
+            return null;
+        }
+
         String password = currentWord + specialCharacters[index];
 
         //gets year, then adds 1 to it if it is July or later, then adds the current year we are testing
@@ -36,17 +40,13 @@ public class WindwardHacker implements PasswordGuesser{
             yearModifier = 0;
             if(++index == specialCharacters.length){
                 index = 0;
-                if(nounlist.hasNext()){
-                    currentWord = nounlist.next();
-                }else{
-                    return null;
+                try{
+                    currentWord = nounlist.readLine();
+                }catch (Exception e){
+                    returningNull = true;
                 }
             }
         }
         return password;
-    }
-
-    public void closeScanner(){
-        nounlist.close();
     }
 }
