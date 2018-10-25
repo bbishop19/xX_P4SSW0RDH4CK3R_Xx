@@ -23,22 +23,22 @@ public class BruteForcer implements PasswordGuesser{
 		for(Integer i : currentGuesses){
 			guess += charset[i];
 		}
-		if(currentGuesses[currentGuesses.length-1] == charset.length-1){
-			currentGuesses[currentGuesses.length-1] = 0;
-			incrementPrev(currentGuesses.length-1);
-		}
-		else{
-			currentGuesses[currentGuesses.length-1]++;
-		}
+		increment(currentGuesses.length-1);
 		return guess;
 	}
 	
-	public void incrementPrev(int index){
-		if(index == 0){
-			currentGuesses = new int[currentGuesses.length+1];
+	public void increment(int index){
+		if(currentGuesses[index] == charset.length-1){
+			if(index == 0){
+				currentGuesses = new int[currentGuesses.length+1];
+			}
+			else{
+				currentGuesses[index] = 0;
+				increment(index-1);
+			}
 		}
 		else{
-			currentGuesses[index-1]++;
+			currentGuesses[index]++;
 		}
 	}
 }
