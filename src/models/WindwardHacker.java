@@ -20,7 +20,7 @@ public class WindwardHacker implements PasswordGuesser{
         baseYear = Calendar.getInstance().get(Calendar.YEAR) +  (Calendar.getInstance().get(Calendar.MONTH)+5)/11;
 
         try{
-            nounlist = new BufferedReader(new FileReader(getClass().getClassLoader().getResource("passwords").getFile()));
+            nounlist = new BufferedReader(new FileReader(getClass().getClassLoader().getResource("words").getFile()));
             currentWord = nounlist.readLine();
         }catch(Exception e){}
 

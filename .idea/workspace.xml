@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="add logic and finish project">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fix bug with bufferedreader in windwardhacker and improve speed to &lt; 100ms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/CommonHacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/CommonHacker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/WindwardHacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/WindwardHacker.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,8 +73,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5559" />
-          <entry key="txt" value="551" />
+          <entry key="java" value="5595" />
+          <entry key="txt" value="628" />
           <entry key="words" value="2" />
         </counts>
       </usages-collector>
@@ -98,8 +96,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5559" />
-          <entry key="PLAIN_TEXT" value="553" />
+          <entry key="JAVA" value="5595" />
+          <entry key="PLAIN_TEXT" value="630" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -113,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/models/WindwardHacker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="189">
+              <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -122,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/CommonHacker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="293">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -515,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540561040239</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix bug with bufferedreader in windwardhacker and improve speed to &lt; 100ms">
+      <created>1540562235539</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1540562235540</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -583,7 +588,8 @@
     <MESSAGE value="adjust size of ui and make controller abstract" />
     <MESSAGE value="create info screen" />
     <MESSAGE value="add logic and finish project" />
-    <option name="LAST_COMMIT_MESSAGE" value="add logic and finish project" />
+    <MESSAGE value="fix bug with bufferedreader in windwardhacker and improve speed to &lt; 100ms" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug with bufferedreader in windwardhacker and improve speed to &lt; 100ms" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -655,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/CommonHacker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="293">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -665,8 +671,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/WindwardHacker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        <state relative-caret-position="189">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
         </state>
       </provider>
     </entry>
