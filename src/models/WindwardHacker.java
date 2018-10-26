@@ -11,25 +11,23 @@ public class WindwardHacker implements PasswordGuesser{
     private int index;
     private String currentWord;
     private int yearModifier;
-    private boolean returningNull;
     private int baseYear;
 
     public WindwardHacker(){
         specialCharacters = new char[]{'!', '@', '#', '$', '%', '^', '&', '*'};
         index = 0;
         yearModifier = 0;
-        returningNull = false;
         baseYear = Calendar.getInstance().get(Calendar.YEAR) +  (Calendar.getInstance().get(Calendar.MONTH)+5)/11;
 
         try{
-            nounlist = new BufferedReader(new FileReader(getClass().getClassLoader().getResource("words").getFile()));
-        }catch(Exception e){
-            returningNull = true;
-        }
+            nounlist = new BufferedReader(new FileReader(getClass().getClassLoader().getResource("passwords").getFile()));
+            currentWord = nounlist.readLine();
+        }catch(Exception e){}
+
     }
 
     public String getNext(){
-        if(returningNull){
+        if(currentWord==null){
             return null;
         }
 
@@ -42,7 +40,7 @@ public class WindwardHacker implements PasswordGuesser{
                 try{
                     currentWord = nounlist.readLine();
                 }catch (Exception e){
-                    returningNull = true;
+                    return null;
                 }
             }
         }

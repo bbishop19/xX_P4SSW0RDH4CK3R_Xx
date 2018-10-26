@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="adjust size of ui and make controller abstract">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="add logic and finish project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/CommonHacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/CommonHacker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/WindwardHacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/WindwardHacker.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,20 +75,21 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4412" />
-          <entry key="txt" value="495" />
+          <entry key="java" value="5559" />
+          <entry key="txt" value="551" />
+          <entry key="words" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="18" />
-          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="JAVA" value="20" />
+          <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="18" />
-          <entry key="passwords" value="4" />
+          <entry key="java" value="20" />
+          <entry key="passwords" value="5" />
           <entry key="placeholder" value="1" />
           <entry key="placeholder2" value="1" />
           <entry key="txt" value="10" />
@@ -96,8 +98,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4412" />
-          <entry key="PLAIN_TEXT" value="495" />
+          <entry key="JAVA" value="5559" />
+          <entry key="PLAIN_TEXT" value="553" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -109,13 +111,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/view/View.java">
+        <entry file="file://$PROJECT_DIR$/src/models/WindwardHacker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-47">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="225">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/CommonHacker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
-                <element signature="e#2259#2260#0" expanded="true" />
-                <element signature="e#2274#2275#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+            <state relative-caret-position="413">
+              <caret line="48" column="46" lean-forward="true" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -133,7 +143,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/words">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1815945">
+            <state relative-caret-position="375">
               <caret line="121063" column="6" selection-start-line="121063" selection-start-column="6" selection-end-line="121063" selection-end-column="6" />
             </state>
           </provider>
@@ -174,11 +184,11 @@
         <option value="$PROJECT_DIR$/src/models/PasswordGuesser.java" />
         <option value="$PROJECT_DIR$/resources/words.txt" />
         <option value="$PROJECT_DIR$/resources/passwords.txt" />
+        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/view/View.java" />
         <option value="$PROJECT_DIR$/resources/words" />
         <option value="$PROJECT_DIR$/src/models/CommonHacker.java" />
         <option value="$PROJECT_DIR$/src/models/WindwardHacker.java" />
-        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/view/View.java" />
       </list>
     </option>
   </component>
@@ -491,7 +501,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540503671260</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="create info screen">
+      <created>1540537493418</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1540537493418</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add logic and finish project">
+      <created>1540561040239</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1540561040239</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -557,7 +581,9 @@
     <MESSAGE value="Change Scanners to BufferedReader s" />
     <MESSAGE value="remove bottleneck" />
     <MESSAGE value="adjust size of ui and make controller abstract" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust size of ui and make controller abstract" />
+    <MESSAGE value="create info screen" />
+    <MESSAGE value="add logic and finish project" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logic and finish project" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -573,23 +599,6 @@
     <entry file="file://$PROJECT_DIR$/resources/10millionpasswords.txt" />
     <entry file="file://$PROJECT_DIR$/resources/nounlist.txt" />
     <entry file="file://$PROJECT_DIR$/resources/words.txt" />
-    <entry file="file://$PROJECT_DIR$/src/models/WindwardHacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/CommonHacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/PasswordGuesser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -611,35 +620,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/words">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815945">
-          <caret line="121063" column="6" selection-start-line="121063" selection-start-column="6" selection-end-line="121063" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/passwords">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        <state relative-caret-position="413">
+          <caret line="48" column="46" lean-forward="true" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/words">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="121063" column="6" selection-start-line="121063" selection-start-column="6" selection-end-line="121063" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="187">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="32" />
           <folding>
-            <element signature="e#2259#2260#0" expanded="true" />
-            <element signature="e#2274#2275#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1885#1886#0" expanded="true" />
+            <element signature="e#1920#1921#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/passwords">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149370">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/CommonHacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/WindwardHacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
