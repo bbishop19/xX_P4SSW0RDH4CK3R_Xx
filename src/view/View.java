@@ -2,6 +2,7 @@ package view;
 
 import java.util.Arrays;
 
+import controller.Controller;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.TilePane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import models.CrackInfo;
 
 public class View extends Application{	
 	public static void main(String[] args){
@@ -28,27 +30,13 @@ public class View extends Application{
 
 		Button wwh = new Button("Windward Hack");
 		wwh.setPrefSize(300, 30);
-		wwh.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-                //todo
-            }
-        });
+
 
 		Button ch = new Button("Common Passwords");
         ch.setPrefSize(300, 30);
-        ch.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-                //todo
-            }
-        });
 
 		Button bf = new Button("Brute Force");
         bf.setPrefSize(300, 30);
-        bf.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-                //todo
-            }
-        });
 
 		mainMenuRoot.getChildren().addAll(password, wwh, ch, bf);
 		Scene mainMenu = new Scene(mainMenuRoot, 300, 120);
@@ -66,23 +54,48 @@ public class View extends Application{
 
 		Text attemptsMessage = new Text("5678 attempts");
 
-		Button backButton = new Button("Test again");
+		Button backButton = new Button("Try again");
 		backButton.setPrefSize(300, 30);
-		backButton.setOnAction(new EventHandler<ActionEvent>() {
-			@Override public void handle(ActionEvent e) {
-				stage.setScene(mainMenu);
-			}
-		});
+
 
 
 		infoRoot.getChildren().addAll(crackedMessage, timeMessage, attemptsMessage, backButton);
 
 		Scene infoScreen = new Scene(infoRoot, 300, 120);
 
-		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
-		stage.setScene(infoScreen);
+
+		stage.setScene(mainMenu);
 		stage.setResizable(false);
 		stage.show();
+
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+		backButton.setOnAction(new EventHandler<ActionEvent>() {
+			@Override public void handle(ActionEvent e) {
+				stage.setScene(mainMenu);
+			}
+		});
+
+		wwh.setOnAction(new EventHandler<ActionEvent>() {
+			@Override public void handle(ActionEvent e) {
+				Controller.windwardCrackAndDisplay(password.getText(), crackedMessage, timeMessage, attemptsMessage);
+				stage.setScene(infoScreen);
+			}
+		});
+
+		ch.setOnAction(new EventHandler<ActionEvent>() {
+			@Override public void handle(ActionEvent e) {
+				Controller.commonCrackAndDisplay(password.getText(), crackedMessage, timeMessage, attemptsMessage);
+				stage.setScene(infoScreen);
+			}
+		});
+
+		bf.setOnAction(new EventHandler<ActionEvent>() {
+			@Override public void handle(ActionEvent e) {
+				Controller.bruteForceCrackAndDisplay(password.getText(), crackedMessage, timeMessage, attemptsMessage);
+				stage.setScene(infoScreen);
+			}
+		});
 	}
 }
