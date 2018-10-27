@@ -3,7 +3,6 @@ package models;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Calendar;
-import java.util.Scanner;
 
 public class WindwardHacker implements PasswordGuesser{
     private BufferedReader nounlist;
@@ -13,6 +12,7 @@ public class WindwardHacker implements PasswordGuesser{
     private int yearModifier;
     private int baseYear;
 
+    //combine common 4-6 letter nouns with common symbols and currently used years to guess most Windward passwords
     public WindwardHacker(){
         specialCharacters = new char[]{'!', '@', '#', '$', '%', '^', '&', '*'};
         index = 0;
@@ -22,7 +22,7 @@ public class WindwardHacker implements PasswordGuesser{
         try{
             nounlist = new BufferedReader(new FileReader(getClass().getClassLoader().getResource("words").getFile()));
             currentWord = nounlist.readLine();
-        }catch(Exception e){}
+        }catch(Exception e){System.out.println(e);System.out.println("A NullPointerException here means the text file is not loading correctly on your computer");}
 
     }
 

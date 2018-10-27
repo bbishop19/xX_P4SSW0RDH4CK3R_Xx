@@ -1,7 +1,5 @@
 package view;
 
-import java.util.Arrays;
-
 import controller.Controller;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -12,7 +10,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.TilePane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import models.CrackInfo;
 
 public class View extends Application{	
 	public static void main(String[] args){
@@ -20,6 +17,7 @@ public class View extends Application{
 	}
 	
 	public void start(Stage stage) throws Exception {
+		//set up the main menu screen
 		TilePane mainMenuRoot = new TilePane();
 
 		PasswordField password = new PasswordField();
@@ -27,15 +25,14 @@ public class View extends Application{
 		password.setPrefSize(300, 30);
 		password.setAlignment(Pos.CENTER);
 
-
-		Button wwh = new Button("Windward Hack");
+		Button wwh = new Button("Windward Hack: O(1)");
 		wwh.setPrefSize(300, 30);
 
 
-		Button ch = new Button("Common Passwords");
+		Button ch = new Button("Common Passwords: O(1)");
         ch.setPrefSize(300, 30);
 
-		Button bf = new Button("Brute Force");
+		Button bf = new Button("Brute Force: O(2^n)");
         bf.setPrefSize(300, 30);
 
 		mainMenuRoot.getChildren().addAll(password, wwh, ch, bf);
@@ -43,6 +40,7 @@ public class View extends Application{
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
+		//set up the info screen
 		TilePane infoRoot = new TilePane();
 		infoRoot.setPrefSize(300, 120);
 		infoRoot.setAlignment(Pos.CENTER);
@@ -71,6 +69,7 @@ public class View extends Application{
 
 		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
+		//set up button press handlers
 		backButton.setOnAction(new EventHandler<ActionEvent>() {
 			@Override public void handle(ActionEvent e) {
 				stage.setScene(mainMenu);

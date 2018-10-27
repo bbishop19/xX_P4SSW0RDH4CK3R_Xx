@@ -1,6 +1,7 @@
 package models;
 
 public class CrackInfo {
+	//wrapper class for info returned by a crack attempt
 	protected boolean cracked;
 	protected long time;
 	protected int attempts;

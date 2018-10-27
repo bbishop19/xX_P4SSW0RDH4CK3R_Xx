@@ -8,6 +8,7 @@ public class BruteForcer implements PasswordGuesser{
 	private int[] currentGuesses = {0};
 	private String guess = "";
 
+	//add the charset's utf-8 hex codes to an arraylist and then cast to char for easy charset creation
 	public BruteForcer(){
 		for(int i = 0x20; i <= 0x7e; i++){
 			charInts.add(i);
@@ -27,6 +28,7 @@ public class BruteForcer implements PasswordGuesser{
 		return guess;
 	}
 	
+	//increment the current index, if it's maxed increment the previous, if it's 0 increase the length being guessed
 	public void increment(int index){
 		if(currentGuesses[index] == charset.length-1){
 			if(index == 0){
